@@ -7,6 +7,11 @@
 **/.firebaserc
 roomdentist-firebase-adminsdk-43dh8-cb3091c532.json
 
+### Custom ###
+.jpg
+.png
+images/*
+
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
