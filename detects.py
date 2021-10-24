@@ -43,9 +43,9 @@ def detectFunction(imageSource, uid, imageNum):
     line_thickness = 3
     view_img = False
     
-    dictValue = {'Cavity': 0, 'Gold': 0, 'Amalgam': 0}
+    dictValue = {'Cavity': 0, 'Gold': 0, 'Amalgam': 0, 'isCavity': "True"}
     
-    source = str(imageSource)
+    source = f"{imageSource}/{imageNum}.png"
     save_img = not nosave and not source.endswith('.txt')  # save inference images
     save_dir = increment_path(Path(project), exist_ok=exist_ok)  # increment run
     # (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
@@ -142,14 +142,8 @@ def detectFunction(imageSource, uid, imageNum):
         if save_img:
             if dataset.mode == 'image':
                 cv2.imwrite(f"{project}/{imageNum}.png", im0)
-        
+    print(dictValue)
     return  dictValue
-                
-    #t = tuple(x / seen * 1E3 for x in dt)  # speeds per image
-    # print(f'Speed: %.1fms pre-process, %.1fms inference, %.1fms NMS per image at shape {(1, 3, *imgsz)}' % t)
-    # if save_txt or save_img:
-    #     s = f"\n{len(list(save_dir.glob('labels/*.txt')))} labels saved to {save_dir / 'labels'}" if save_txt else ''
-    #     print(f"Results saved to {colorstr('bold', save_dir)}{s}")
 
 def todayDate():
     dt_now = datetime.datetime.now(pytz.timezone('Asia/Seoul'))
