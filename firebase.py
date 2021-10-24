@@ -1,6 +1,6 @@
 from flask import Flask, json, request, jsonify
 from flask_restful import Resource, Api
-from flask_cors import CORS, cross_origin
+from flask_cors import CORS
 from OpenSSL import SSL
 import datetime as dt
 import logging, ssl
