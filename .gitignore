@@ -5,13 +5,15 @@
 .idea
 **/node_modules/*
 **/.firebaserc
-roomdentist-firebase-adminsdk-43dh8-cb3091c532.json
+roomdentist-firebase-adminsdk-43dh8-b473fe93b2.json
+mask_periodontitisDetect.h5
 
 ### Custom ###
 .jpg
 .png
 images/*
 model.pt
+
 
 ### Firebase Patch ###
 .runtimeconfig.json
