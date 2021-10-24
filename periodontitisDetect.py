@@ -13,23 +13,6 @@ import mrcnn.model as modellib
 from mrcnn import visualize
 from train_mask_rcnn import *
 
-# from tritonclient.grpc import grpcclient
-
-# def connectServer(url):
-#     try:
-#         triton_client = grpcclient.InferenceServerClient(
-#             url=url,
-#             verbose=False,
-#             ssl=False)
-#         print("Channel creation success")
-#     except Exception as e:
-#         triton_client = None
-#         print("channel creation failed: " + str(e))
-
-#     return triton_client
-
-# tirtonclient = connectServer("0.0.0.0:00000")
-
 def detectionMaskFunction(imagePath, imageNum):
     weights = "/workspace/RoomDentist/mask_periodontitisDetect.h5"
     model,config = load_inference_model(1,weights)
